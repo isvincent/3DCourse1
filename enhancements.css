@@ -1,0 +1,14 @@
+/* 原場景、色彩、玻璃面板與島嶼位置沿用原始檔。 */
+:root{--header-bottom:90px;--dock-height:78px;color-scheme:dark}
+body{height:100dvh}button,input,textarea{font:inherit}button{touch-action:manipulation}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #67e8f9;outline-offset:3px}
+#panel-body{user-select:text;overflow-wrap:anywhere;overscroll-behavior:contain}
+#learning-panel{top:var(--header-bottom);bottom:var(--dock-height);max-width:calc(100vw - 24px)}
+#panel-tabs{flex-shrink:0}#panel-tabs button{min-height:44px}#panel-body .text-xs{font-size:14px;line-height:1.8}#panel-body .text-sm{font-size:16px;line-height:1.8}
+#help-modal>div,#certificate-modal>div{max-height:calc(100dvh - 32px);overflow-y:auto}
+#study-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}#study-tools button,.task-card button{padding:8px 12px;border:1px solid #475569;border-radius:12px;background:#1e293b;color:#e2e8f0;cursor:pointer;min-height:44px}
+.task-card{padding:18px;border:1px solid #334155;border-radius:18px;background:rgba(30,41,59,.75);line-height:1.85}.task-card h3{font-size:19px;color:#67e8f9;font-weight:800}.task-card h4{font-weight:700;margin-top:16px}.task-card textarea{width:100%;min-height:140px;background:#0f172a;color:white;border:1px solid #64748b;padding:12px;border-radius:12px;user-select:text}.task-card li{margin-left:22px;list-style:decimal}.task-card table{width:100%;font-size:14px}.task-card th,.task-card td{border-bottom:1px solid #475569;padding:8px;text-align:left}
+#app-status{position:fixed;left:12px;bottom:calc(var(--dock-height) + 6px);z-index:35;max-width:80vw;background:#0f172aee;border:1px solid #475569;border-radius:10px;padding:6px 10px;font-size:12px;pointer-events:none}
+#canvas-container{color:#cbd5e1;display:grid;place-items:center;padding:0;box-sizing:border-box}#canvas-container canvas{position:absolute;inset:0;touch-action:none}
+@media(max-width:767px){header{gap:6px!important;padding:8px!important}header>div{max-width:100%}header>div:first-child{width:100%;padding:8px 10px}header>div:nth-child(2){width:100%;justify-content:space-between;gap:4px}header h1{font-size:14px!important}#badge-slots{display:none}header .glass-panel{gap:6px}#learning-panel{right:8px;width:calc(100vw - 16px);max-width:none;border-radius:20px}#panel-header{padding:12px}#panel-title{font-size:16px}#panel-body{padding:14px}nav{bottom:max(8px,env(safe-area-inset-bottom))!important;max-width:calc(100vw - 16px)!important}nav button{min-height:44px}#panel-tabs{padding:8px}#panel-tabs button{padding:8px 12px}.task-card{padding:14px}}
+@media(max-height:500px) and (orientation:landscape){header>div:first-child{display:none}#learning-panel{width:min(680px,calc(100vw - 16px))}#app-status{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
